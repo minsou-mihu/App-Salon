@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ fournisseur }} - Fiche Produits</title>
+</head>
+<body style="font-family: Arial; padding: 20px; background-color: #fdf6f0;">
+    <h1>{{ fournisseur }} - Fiche Produits</h1>
+
+    <h2>Produits existants</h2>
+    <ul>
+{% for produit in produits %}
+            <li>
+{{ produit.nom }} - {{ produit.quantite }} unité{{ 's' if produit.quantite > 1 else '' }}
+{% if produit.quantite <= 2 %}
+                  <span style="color: red; font-weight: bold;">– À commander !</span>
+{% endif %}
+              </li>
+{% endfor %}
+    </ul>
+<hr>
+<h2>Ajouter un nouveau produit</h2>
+<form method="POST"
+  <label>Nom du produit :</label><br>
+  <input type="text" name="nom" required><br><br>
+
+  <label>Catégorie :</label><br>
+  <select name="categorie">
+      <option value="technique">Technique</option>
+      <option value="revente">Revente</option>
+  </select><br><br>
+
+  <label>Gamme :</label><br>
+  <select name="gamme">
+      <option value="shampoing">Shampoing</option>
+      <option value="masque">Masque</option>
+      <option value="coiffant">Coiffant</option>
+  </select><br><br>
+
+  <label>Code-barres :</label><br>
+  <input type="text" name="code_barres"><br><br>
+<div id="reader" style="width: 300px; margin-top: 10px;"></div>
+  <input type="submit" value="Ajouter le produit">
+</form>
+<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+<script>
+    function onScanSuccess(decodedText, decodedResult) {
+    document.getElementById("code_barres").value = decodedText;
+    html5QrcodeScanner.clear(); // Stop le scan une fois lu
+    }
+
+    let html5QrcodeScanner = new Html5QrcodeScanner(
+    "reader", {
+    fps: 10,
+    qrbox: 250,
+    rememberLastUsedCamera: true
+    });
+    html5QrcodeScanner.render(onScanSuccess);
+</script>
+</body>
+</html>

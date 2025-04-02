@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Accueil - Salon stock</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Suivi de stock</h1>
+
+  <div class="icon-grid">
+
+  <a href="/choix-fournisseur-entree">
+    <div class="icon-card">
+      <img src="{{ url_for('static', filename='icons/entree.png') }}" alt="Entrée">
+    </div>
+  </a>
+
+  <a href="/sortie">
+    <div class="icon-card">
+      <img src="{{ url_for('static', filename='icons/sortie.png') }}" alt="Sortie">
+    </div>
+  </a>
+
+  <a href="/choix-fournisseur-inventaire">
+    <div class="icon-card">
+      <img src="{{ url_for('static', filename='icons/inventaire.png') }}" alt="Inventaire">
+    </div>
+  </a>
+  
+  <a href="/choix-fournisseur-fiche-produits">
+    <div class="icon-card">
+      <img src="{{ url_for('static', filename='icons/ficheproduits.png') }}" alt="Fiche produits">
+    </div>
+  </a>
+
+  <a href="/rapports">
+    <div class="icon-card">
+      <img src="{{ url_for('static', filename='icons/rapport.png') }}" alt="Rapports">
+    </div>
+  </a>
+
+  <a href="/reglages">
+    <div class="icon-card">
+      <img src="{{ url_for('static', filename='icons/reglages.png') }}" alt="Réglages">
+    </div>
+  </a>
+
+  </div>
+</body>
+</html>

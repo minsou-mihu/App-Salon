@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Choisir un fournisseur - Ficheproduits</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Fiche produits - Choisis un fournisseur</h1>
+
+  <div class="icon-grid">
+    <a href="/brunoflaujac">
+      <div class="icon-card">
+        <img src="{{ url_for('static', filename='icons/brunoflaujac.png') }}" alt="Bruno Flaujac">
+      </div>
+    </a>
+    <a href="/subtil">
+      <div class="icon-card">
+        <img src="{{ url_for('static', filename='icons/subtil.png') }}" alt="Subtil">
+      </div>
+    </a>
+    <a href="/loreal">
+      <div class="icon-card">
+        <img src="{{ url_for('static', filename='icons/loreal.png') }}" alt="L'Oréal">
+      </div>
+    </a>
+    <a href="/natureeva">
+      <div class="icon-card">
+        <img src="{{ url_for('static', filename='icons/natureeva.png') }}" alt="Nature Eva">
+      </div>
+    </a>
+    <a href="/kerastase">
+      <div class="icon-card">
+        <img src="{{ url_for('static', filename='icons/kerastase.png') }}" alt="Kerastase">
+      </div>
+    </a>
+    <a href="/ottokeunis">
+      <div class="icon-card">
+        <img src="{{ url_for('static', filename='icons/ottokeunis.png') }}" alt="Otto Keunis">
+      </div>
+    </a>
+    <a href="/menstories">
+      <div class="icon-card">
+        <img src="{{ url_for('static', filename='icons/menstories.png') }}" alt="Men Stories">
+      </div>
+    </a>
+    <a href="/johnnyverax">
+      <div class="icon-card">
+        <img src="{{ url_for('static', filename='icons/johnnyverax.png') }}" alt="Johnny Verax">
+      </div>
+    </a>
+    <a href="/reborn">
+      <div class="icon-card">
+        <img src="{{ url_for('static', filename='icons/reborn.png') }}" alt="Re Born">
+      </div>
+    </a>
+  </div>
+
+  <br><a href="/home">← Retour</a>
+</body>
+</html>

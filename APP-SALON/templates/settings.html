@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Réglages</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Réglages</h1>
+
+  <h2>Changer le mot de passe</h2>
+  <form action="/update_password" method="POST">
+    <input type="password" name="old_password" placeholder="Mot de passe actuel" required><br>
+    <input type="password" name="new_password" placeholder="Nouveau mot de passe" required><br>
+    <button type="submit">Modifier</button>
+  </form>
+
+  <h2>Changer la photo de profil</h2>
+  <form action="/update_photo" method="POST" enctype="multipart/form-data">
+    <input type="file" name="photo" accept="image/*" required><br>
+    <button type="submit">Mettre à jour</button>
+  </form>
+
+  <br><a href="/home">Retour</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h2>Qui êtes-vous ?</h2>
+  <div class="login-grid">
+    {% for username, info in users.items() %}
+      <div class="login-card">
+        <form action="/login" method="post">
+          <input type="hidden" name="username" value="{{ username }}">
+          <img src="{{ url_for('static', filename='images/' + info.photo) }}" alt="{{ username }}">
+          <p>{{ info.name }}</p>
+          <input type="password" name="password" placeholder="Mot de passe" required>
+          <button type="submit">Connexion</button>
+        </form>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+</html>

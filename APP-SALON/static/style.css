@@ -1,0 +1,76 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f3f0eb, #e8e2da);
+  color: #333;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #a98274;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 icônes par ligne */
+  gap: 40px;
+  justify-items: center;
+  padding: 40px;
+}
+
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.icon-card:hover {
+  transform: scale(1.05);
+}
+
+.icon-card img {
+  width: 80px; /* Agrandir l’icône ici */
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.icon-card p {
+  display: none; /* Masquer le texte en dessous si tu ne veux plus les titres */
+}
+
+
+.login-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.login-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 180px;
+}
+.login-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
